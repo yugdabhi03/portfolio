@@ -4,7 +4,15 @@ A modern, high-performance personal developer portfolio built from scratch. Desi
 
 
 
-## ✨ Features
+## 💻 Featured Projects Tech Stack
+
+While this repository houses the portfolio interface, the projects showcased within it demonstrate advanced backend and frontend engineering:
+
+- **Route Optimizer System:** React frontend with a Python FastAPI backend. It processes OpenStreetMap graph data (OSMnx) and solves the Traveling Salesperson Problem (TSP) using **Dijkstra's Algorithm** for distance matrices, an **Exact Permutation Solver** for small sets, and a **Nearest-Neighbor + Node Relocation Heuristic** for large datasets.
+- **Secure Notes:** React, Express, SQLite. Features Server-Side AES-256-GCM encryption for data at rest and robust JWT-based authentication.
+- **Smart Task Manager:** React, Tailwind CSS, MongoDB, Express. Features complex drag-and-drop mechanics using `dnd-kit` and task analytics via Recharts.
+
+## ✨ Portfolio Features
 
 - **High-Performance Animations:** Custom scroll-triggered animations powered by GSAP and Vanilla-Tilt.
 - **Interactive UI/UX:** Features a custom cursor, dynamic background particles, and glassmorphic design elements.
