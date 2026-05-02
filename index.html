@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Developer Portfolio | Yug Dabhi</title>
+    <meta name="description" content="Portfolio of a software developer featuring projects like To-Do List, Route Optimizer, and Secure Notes.">
+    <!-- Open Graph / SEO -->
+    <meta property="og:title" content="Yug Dabhi - Software Developer">
+    <meta property="og:description" content="Portfolio featuring modern web applications, algorithms, and developer tools.">
+    <meta property="og:image" content="assets/images/og-preview.png">
+    <meta property="og:url" content="https://yugdabhi.dev">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Yug Dabhi - Software Developer">
+    <meta name="twitter:description" content="Portfolio featuring modern web applications, algorithms, and developer tools.">
+    <meta name="twitter:image" content="assets/images/og-preview.png">
+
+    <!-- Theme & Canonical -->
+    <meta name="theme-color" content="#0a0a0c">
+    <link rel="canonical" href="https://yugdabhi.dev">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen" class="splash-screen">
+        <div class="splash-counter" id="splash-counter">0%</div>
+        <div class="splash-loading-bar"><div class="splash-loading-progress" id="splash-progress"></div></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div id="cursor-dot" class="cursor-dot"></div>
+    <div id="cursor-ring" class="cursor-ring"></div>
+    <div id="scroll-progress" class="scroll-progress"></div>
+    <div class="background-elements">
+        <div id="tsparticles" class="tsparticles"></div>
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- Sticky Social Sidebar -->
+    <div class="social-sidebar">
+        <a href="https://github.com/yugdabhi03" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/yug-dabhi/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:yugdabhi974@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#" class="logo">Yug<span>.</span></a>
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme"><i class="fa-solid fa-moon"></i></button></li>
+                <li class="mobile-socials">
+                    <a href="https://github.com/yugdabhi03" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/yug-dabhi/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="mailto:yugdabhi974@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1>Hi, I'm <span class="highlight">Yug Dabhi</span><br><span id="typed-text"></span></h1>
+                <p>Software Developer specializing in building secure full-stack applications and optimizing complex algorithms. I focus on high-performance tools that solve real-world logistical and privacy challenges.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="assets/resume.pdf" class="btn btn-secondary" download>Download Resume</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Terminal -->
+        <section id="terminal-section" class="terminal-section">
+            <div class="terminal-window" data-tilt data-tilt-max="2" data-tilt-glare data-tilt-max-glare="0.1">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="btn-close"></span>
+                        <span class="btn-minimize"></span>
+                        <span class="btn-maximize"></span>
+                    </div>
+                    <div class="terminal-title">guest@yugdabhi: ~</div>
+                </div>
+                <div class="terminal-body" id="terminal-body">
+                    <div class="terminal-line">Welcome to Yug's Interactive Terminal.</div>
+                    <div class="terminal-line">Type <span class="highlight">help</span> to see available commands.</div>
+                    <div class="terminal-input-wrapper">
+                        <span class="prompt">guest@yugdabhi:~$</span>
+                        <input type="text" id="terminal-input" autocomplete="off" spellcheck="false">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="line"></div>
+            </div>
+            <div class="about-content">
+                <p>I'm a software developer driven by the challenge of turning complex mathematical concepts into seamless user experiences. Whether it's implementing rigorous encryption for privacy or optimizing routing matrices, I build solutions that prioritize both robust architecture and premium design.</p>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>2025</h3>
+                            <p>Graduated with a Computer Programming Diploma</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>2025-2026</h3>
+                            <p>Architected a full-stack route optimization engine with Dijkstra's algorithm and developed zero-knowledge secure communication tools.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Present</h3>
+                            <p>Actively building high-performance web applications and open for Software Developer roles!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live GitHub Stats -->
+                <div class="github-stats">
+                    <div class="stats-container" data-tilt data-tilt-max="5" data-tilt-glare data-tilt-max-glare="0.2">
+                        <div class="stat-header">
+                            <i class="fa-brands fa-github"></i> <span>Live GitHub Stats</span>
+                        </div>
+                        <div class="stat-grid">
+                            <div class="stat-box">
+                                <span class="stat-value" id="gh-repos">-</span>
+                                <span class="stat-label">Public Repos</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-value" id="gh-followers">-</span>
+                                <span class="stat-label">Followers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <div class="section-header">
+                <h2>Technical Skills</h2>
+                <div class="line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category-card" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.2">
+                    <h3><i class="fa-solid fa-code"></i> Frontend</h3>
+                    <div class="skill-list">
+                        <div class="skill-item"><i class="fa-brands fa-react"></i> React.js</div>
+                        <div class="skill-item"><i class="fa-brands fa-js"></i> JavaScript</div>
+                        <div class="skill-item"><i class="fa-brands fa-html5"></i> HTML5</div>
+                        <div class="skill-item"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
+                    </div>
+                </div>
+                <div class="skill-category-card" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.2">
+                    <h3><i class="fa-solid fa-server"></i> Backend</h3>
+                    <div class="skill-list">
+                        <div class="skill-item"><i class="fa-brands fa-node-js"></i> Node.js</div>
+                        <div class="skill-item"><i class="fa-brands fa-python"></i> Python</div>
+                        <div class="skill-item"><i class="fa-solid fa-database"></i> SQL</div>
+                        <div class="skill-item"><i class="fa-solid fa-code"></i> C/C++</div>
+                    </div>
+                </div>
+                <div class="skill-category-card" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.2">
+                    <h3><i class="fa-solid fa-wrench"></i> Tools</h3>
+                    <div class="skill-list">
+                        <div class="skill-item"><i class="fa-brands fa-git-alt"></i> Git</div>
+                        <div class="skill-item"><i class="fa-brands fa-aws"></i> AWS</div>
+                        <div class="skill-item"><i class="fa-brands fa-linux"></i> Linux</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <div class="line"></div>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="algorithms">Algorithms</button>
+                <button class="filter-btn" data-filter="productivity">Productivity</button>
+            </div>
+
+            <div class="project-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="algorithms" data-tilt data-tilt-max="5" data-tilt-glare data-tilt-max-glare="0.4">
+                    <div class="project-image">
+                        <img src="assets/images/route_optimizer.png?v=2" alt="Route Optimizer Project">
+                    </div>
+                    <div class="project-info">
+                        <h3>Route Optimizer</h3>
+                        <p>An advanced navigation engine built to process complex mathematical road-network models, utilizing algorithmic optimization to generate highly efficient driving paths.</p>
+                        <div class="project-details">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Built an N x N distance matrix via Dijkstra's algorithm</li>
+                                <li>Implemented an exact TSP permutation solver ensuring optimal small-set routing</li>
+                                <li>Engineered a scalable node-insertion heuristic for large datasets</li>
+                            </ul>
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-sm btn-primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                                <a href="#" class="btn btn-sm btn-secondary"><i class="fa-brands fa-github"></i> Source Code</a>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span>Algorithms</span>
+                            <span>Navigation</span>
+                            <span>UI/UX</span>
+                        </div>
+                        <span class="project-link expand-btn">Click to Expand </span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-category="frontend" data-tilt data-tilt-max="5" data-tilt-glare data-tilt-max-glare="0.4">
+                    <div class="project-image">
+                        <img src="assets/images/secure_notes.png?v=2" alt="Secure Notes Project">
+                    </div>
+                    <div class="project-info">
+                        <h3>Secure Notes</h3>
+                        <p>A cryptographically secure web application engineered for absolute privacy, utilizing modern web standards to ensure data remains strictly in the user's control.</p>
+                        <div class="project-details">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Implemented robust AES-256 end-to-end encryption</li>
+                                <li>Designed a zero-knowledge architecture to prevent server-side data access</li>
+                                <li>Developed a seamless, rich-text UI with real-time encryption</li>
+                            </ul>
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-sm btn-primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                                <a href="#" class="btn btn-sm btn-secondary"><i class="fa-brands fa-github"></i> Source Code</a>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span>Security</span>
+                            <span>Encryption</span>
+                            <span>Frontend</span>
+                        </div>
+                        <span class="project-link expand-btn">Click to Expand </span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-category="productivity" data-tilt data-tilt-max="5" data-tilt-glare data-tilt-max-glare="0.4">
+                    <div class="project-image">
+                        <img src="assets/images/todo_list.png?v=2" alt="To-Do List Project">
+                    </div>
+                    <div class="project-info">
+                        <h3>Smart To-Do List</h3>
+                        <p>A highly responsive, state-driven productivity application focusing on smooth micro-interactions and an optimized, frictionless user experience.</p>
+                        <div class="project-details">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Engineered complex drag-and-drop DOM manipulations</li>
+                                <li>Built dynamic state management for tags, categories, and filtering</li>
+                                <li>Designed a premium, fully responsive modern UI</li>
+                            </ul>
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-sm btn-primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                                <a href="#" class="btn btn-sm btn-secondary"><i class="fa-brands fa-github"></i> Source Code</a>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span>Productivity</span>
+                            <span>JavaScript</span>
+                            <span>CSS</span>
+                        </div>
+                        <span class="project-link expand-btn">Click to Expand </span>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="contact-card">
+                <h2>Let's work together</h2>
+                <p>I'm currently open for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                <form id="contact-form" class="contact-form">
+                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
+                    <input type="hidden" name="subject" value="New message from your Portfolio">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message <i class="fa-solid fa-paper-plane" style="margin-left: 0.5rem;"></i></button>
+                    <div id="form-status" class="form-status"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <a href="#" class="logo">Yug<span>.</span></a>
+            <div class="footer-socials">
+                <a href="https://github.com/yugdabhi03" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/yug-dabhi/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+            <p>&copy; 2026 <span class="highlight">Yug Dabhi</span>. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Custom Context Menu -->
+    <div id="context-menu" class="context-menu">
+        <div class="context-menu-item" id="ctx-toggle-theme"><i class="fa-solid fa-moon"></i> Toggle Theme</div>
+        <div class="context-menu-item" id="ctx-copy-email"><i class="fa-solid fa-envelope"></i> Copy Email</div>
+        <a href="assets/resume.pdf" download class="context-menu-item" style="text-decoration:none;color:inherit;"><i class="fa-solid fa-download"></i> Download Resume</a>
+        <div class="context-menu-divider"></div>
+        <div class="context-menu-item" id="ctx-trigger-confetti"><i class="fa-solid fa-wand-magic-sparkles"></i> Trigger Confetti</div>
+    </div>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="project-modal hidden">
+        <div class="modal-content" data-tilt data-tilt-max="2" data-tilt-glare data-tilt-max-glare="0.1">
+            <span class="modal-close" id="modal-close">&times;</span>
+            <div class="modal-image-container">
+                <img id="modal-image" src="" alt="Project Image">
+            </div>
+            <div class="modal-details">
+                <h2 id="modal-title">Project Title</h2>
+                <div class="modal-tags" id="modal-tags"></div>
+                <p id="modal-description">Project description goes here.</p>
+                <div id="modal-features"></div>
+                <div class="modal-actions" id="modal-actions"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Snake Game Modal -->
+    <div id="game-modal" class="game-modal hidden">
+        <div class="game-container">
+            <div class="game-header">
+                <h2>Terminal Snake</h2>
+                <div class="score-display">Score: <span id="snake-score">0</span></div>
+                <span class="game-close" id="game-close">&times;</span>
+            </div>
+            <canvas id="snake-canvas" width="400" height="400"></canvas>
+            <div class="game-instructions">Use Arrow Keys to play. Press Space to pause.</div>
+            <div id="game-over-screen" class="game-over-screen hidden">
+                <h3>Game Over!</h3>
+                <button id="restart-game" class="btn btn-primary">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
