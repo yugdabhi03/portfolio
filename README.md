@@ -2,7 +2,7 @@
 
 A modern, high-performance personal developer portfolio built from scratch. Designed with a focus on minimalism, smooth interactive animations, and professional presentation of software projects.
 
-![Portfolio Preview](assets/images/og-preview.png)
+
 
 ## ✨ Features
 
