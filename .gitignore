@@ -2,3 +2,6 @@ route-optimizer-system/
 secure-notes/
 smart-task-manager/
 search tool/
+resume/
+*.docx
+RESUME.md
