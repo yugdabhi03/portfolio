@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         responseLine.innerHTML = `Yug Dabhi - Software Developer passionate about clean code and algorithms.`;
                         break;
                     case 'skills':
-                        responseLine.innerHTML = `Frontend: React, JS, HTML, CSS<br>Backend: Node.js, Python, SQL, C/C++<br>Tools: Git, AWS, Linux`;
+                        responseLine.innerHTML = `Frontend: React, JS, HTML, CSS<br>Backend: Node.js, Python, SQL, C/C++<br>Tools: Git, Linux`;
                         break;
                     case 'projects':
                         responseLine.innerHTML = `1. Route Optimizer<br>2. Secure Notes<br>3. Smart To-Do List<br>4. Code Snippet Tool`;
