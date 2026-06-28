@@ -405,6 +405,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Scroll Progress
+    const scrollProgress = document.getElementById('scroll-progress');
     let progressTicking = false;
     
     window.addEventListener('scroll', () => {
@@ -692,10 +693,16 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.disabled = true;
 
             const formData = new FormData(contactForm);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
 
             fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
-                body: formData
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
             })
             .then(response => response.json())
             .then(data => {
@@ -704,7 +711,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     formStatus.className = "form-status success";
                     contactForm.reset();
                 } else {
-                    formStatus.textContent = "Oops! Something went wrong. Please try again.";
+                    formStatus.textContent = data.message || "Oops! Something went wrong. Please try again.";
                     formStatus.className = "form-status error";
                     console.error("Web3Forms Error:", data);
                 }
